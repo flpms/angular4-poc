@@ -1,3 +1,21 @@
 <h1>
-  {{title}}
+  {{title}} - {{ owner }}
 </h1>
+
+<form #ngForm="ngForm">
+
+  <paper-input label="Owner" emitChanges required name="owner" [(ngModel)]="owner">
+    <iron-icon icon="mail" slot="prefix"></iron-icon>
+    <iron-icon icon="mail" slot="sufix"></iron-icon>
+  </paper-input>
+
+  <paper-input label="Name" emitChanges required name="title" [(ngModel)]="title">
+    <iron-icon icon="speaker-notes" slot="prefix"></iron-icon>
+    <span slot="prefix"></span>
+  </paper-input>
+
+  <paper-textarea charCounter emitChanges multiline rows="3" ngDefaultControl name="text" [(ngModel)]="text"></paper-textarea>
+
+  <paper-button raised label="Submit" class="green">Submit</paper-button>
+
+</form>

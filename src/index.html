@@ -7,8 +7,34 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="./assets/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+
+ 
+  <link rel="import" href="./assets/bower_components/paper-input/paper-textarea.html" />
+
+  <link rel="import" href="./assets/bower_components/paper-input/paper-input.html" />
+  <link rel="import" href="./assets/bower_components/paper-styles/color.html" />
+  <link rel="import" href="./assets/bower_components/paper-styles/typography.html" />
+  <link rel="import" href="./assets/bower_components/paper-styles/default-theme.html" />
+  <link rel="import" href="./assets/bower_components/paper-styles/demo-pages.html" />
+
+  <link rel="import" href="./assets/bower_components/iron-flex-layout/iron-flex-layout.html" />
+  <link rel="import" href="./assets/bower_components/iron-icons/iron-icons.html" />
+ 
 </head>
 <body>
   <app-root>Loading...</app-root>
+
+  <script>
+    // For browsers that support webcomponents, the loader will immediately fire the ready event
+    // before Angular bootstraps. This flag will let main.ts know to continue rather than wait for
+    // the event.
+    window.webComponentsReady = false;
+    window.addEventListener('WebComponentsReady', function() {
+      window.webComponentsReady = true;
+    });
+  </script>
+
+
 </body>
 </html>

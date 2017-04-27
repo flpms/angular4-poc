@@ -4,6 +4,9 @@
 /dist
 /tmp
 /out-tsc
+/bower_components
+/src/assets/bower_components
+/src/assets/bower_components/
 
 # dependencies
 /node_modules
@@ -80,6 +83,4 @@ jspm_packages
 .node_repl_history
  
 
- /bower_components
-
- /src/assets/bower_components/
+ 

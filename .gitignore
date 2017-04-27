@@ -81,4 +81,5 @@ jspm_packages
  
 
  /bower_components
- src/assets/bower_components/
+
+ /src/assets/bower_components/

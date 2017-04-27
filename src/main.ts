@@ -8,4 +8,14 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+function bootstrap() {
+  platformBrowserDynamic().bootstrapModule(AppModule, {
+  enableLegacyTemplate: false
+});
+}
+
+if ((<any>window).webComponentsReady) {
+  bootstrap();
+} else {
+  window.addEventListener('WebComponentsReady', bootstrap);
+}
